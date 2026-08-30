@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     "rest_framework",
     "corsheaders",
 
@@ -230,13 +229,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ============================================================
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
     "https://code-prep-rho.vercel.app",
+    "https://code-prep-61ga3p40p-build-connect2.vercel.app",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "https://code-prep-rho.vercel.app",
+    "https://code-prep-61ga3p40p-build-connect2.vercel.app",
 ]
-
 # During development only
 if DEBUG:
 
