@@ -35,11 +35,10 @@ ALLOWED_HOSTS = [
     host.strip()
     for host in os.getenv(
         "ALLOWED_HOSTS",
-        "localhost,127.0.0.1"
+        "localhost,127.0.0.1,codeprep-pnd4.onrender.com"
     ).split(",")
     if host.strip()
 ]
-
 
 # ============================================================
 # APPLICATIONS
