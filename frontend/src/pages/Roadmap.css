@@ -1,0 +1,165 @@
+.roadmap-page {
+  padding: 32px;
+}
+
+.roadmap-header {
+  margin-bottom: 28px;
+}
+
+.roadmap-header h1 {
+  margin: 6px 0;
+  font-size: 28px;
+}
+
+.roadmap-header p {
+  color: #777;
+}
+
+.roadmap-empty {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.roadmap-big-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  background: #f0edff;
+  color: #5546e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.roadmap-empty h1 {
+  margin-bottom: 8px;
+}
+
+.roadmap-empty p {
+  color: #777;
+  margin-bottom: 22px;
+}
+
+.primary-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.roadmap-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.roadmap-problem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  background: white;
+  border: 1px solid #e8e8ef;
+  border-radius: 12px;
+}
+
+.roadmap-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f0edff;
+  color: #5546e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.roadmap-problem-content {
+  flex: 1;
+}
+
+.roadmap-topic {
+  font-size: 11px;
+  color: #777;
+}
+
+.roadmap-problem-content h3 {
+  margin: 4px 0 7px;
+}
+
+.difficulty {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.difficulty.easy {
+  background: #e7f8ee;
+  color: #198754;
+}
+
+.difficulty.medium {
+  background: #fff4df;
+  color: #b77900;
+}
+
+.difficulty.hard {
+  background: #ffe7e7;
+  color: #d33;
+}
+
+.roadmap-solve {
+  border: none;
+  background: transparent;
+  color: #5546e8;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.roadmap-form {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.roadmap-form label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.roadmap-form select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 13px;
+  outline: none;
+}
+
+.roadmap-form select:focus {
+  border-color: #5546e8;
+}
+
+.roadmap-form .primary-btn {
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.roadmap-form .primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
