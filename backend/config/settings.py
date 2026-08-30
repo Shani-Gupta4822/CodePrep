@@ -230,11 +230,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ============================================================
 
 CORS_ALLOWED_ORIGINS = [
-
     "http://localhost:5173",
-
+    "https://code-prep-rho.vercel.app",
 ]
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://code-prep-rho.vercel.app",
+]
 
 # During development only
 if DEBUG:
