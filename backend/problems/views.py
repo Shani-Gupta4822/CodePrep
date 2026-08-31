@@ -1463,26 +1463,39 @@ def login_api(request):
             status=400
         )
 
-    user = authenticate(
-        username=username,
-        password=password
-    )
-
-    if user is None:
-        return Response(
-            {"message": "Invalid username or password."},
-            status=401
+    try:
+        user = authenticate(
+            username=username,
+            password=password
         )
 
-    refresh = RefreshToken.for_user(user)
+        if user is None:
+            return Response(
+                {"message": "Invalid username or password."},
+                status=401
+            )
 
-    return Response({
-        "message": "Login successful.",
-        "access": str(refresh.access_token),
-        "refresh": str(refresh),
-        "user": {
-            "id": user.id,
-            "username": user.username,
-            "email": user.email
-        }
-    })
+        refresh = RefreshToken.for_user(user)
+
+        return Response({
+            "message": "Login successful.",
+            "access": str(refresh.access_token),
+            "refresh": str(refresh),
+            "user": {
+                "id": user.id,
+                "username": user.username,
+                "email": user.email
+            }
+        })
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+
+        return Response(
+            {
+                "message": "Login error",
+                "error": str(e)
+            },
+            status=500
+        )
