@@ -37,7 +37,7 @@ function Analytics() {
       try {
 
         const response = await fetch(
-          "http://127.0.0.1:8000/api/problems/analytics/",
+          "https://codeprep-pnd4.onrender.com/api/problems/analytics/",
           {
             method: "GET",
 
