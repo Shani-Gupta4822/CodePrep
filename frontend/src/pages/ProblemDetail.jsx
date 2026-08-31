@@ -344,7 +344,7 @@ const [runResult, setRunResult] = useState(null);
 const [running, setRunning] = useState(false);
 
 useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/problems/${id}/`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/problems/${id}/`)
       .then((response) => response.json())
       .then((data) => {
   console.log("PROBLEM API:", data);
@@ -377,7 +377,7 @@ useEffect(() => {
   try {
 
     const response = await fetch(
-      "http://127.0.0.1:8000/api/problems/run/",
+      `${import.meta.env.VITE_API_URL}/api/problems/run/`,
       {
         method: "POST",
 
@@ -428,7 +428,7 @@ const handleSubmit = async () => {
   try {
 
     const response = await fetch(
-      "http://127.0.0.1:8000/api/problems/submit/",
+      `${import.meta.env.VITE_API_URL}/api/problems/submit/`,
       {
         method: "POST",
 

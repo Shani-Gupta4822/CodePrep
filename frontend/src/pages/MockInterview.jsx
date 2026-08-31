@@ -39,7 +39,7 @@ function MockInterview() {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/problems/mock-interview/",
+        `${import.meta.env.VITE_API_URL}/api/problems/mock-interview/`,
         {
           method: "POST",
           headers: {
@@ -92,7 +92,7 @@ function MockInterview() {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/problems/mock-interview/",
+        `${import.meta.env.VITE_API_URL}/api/problems/mock-interview/`,
         {
           method: "POST",
           headers: {
@@ -149,7 +149,7 @@ function MockInterview() {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/problems/mock-interview/",
+        `${import.meta.env.VITE_API_URL}/api/problems/mock-interview/`,
         {
           method: "POST",
           headers: {
