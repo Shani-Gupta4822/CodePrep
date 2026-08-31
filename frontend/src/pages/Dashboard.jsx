@@ -88,15 +88,14 @@ function Dashboard() {
       try {
 
         const response = await fetch(
-          fetch(`${import.meta.env.VITE_API_URL}/api/problems/dashboard-stats/`),          {
-            method: "GET",
-
-            headers: {
-              "Authorization": `Bearer ${token}`,
-            },
-          }
-        );
-
+  `${import.meta.env.VITE_API_URL}/api/problems/dashboard-stats/`,
+  {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
+  }
+);
 
         const data = await response.json();
 
@@ -148,8 +147,8 @@ function Dashboard() {
   useEffect(() => {
 
     fetch(
-      "http://127.0.0.1:8000/api/problems/"
-    )
+  `${import.meta.env.VITE_API_URL}/api/problems/`
+)
       .then((response) => response.json())
       .then((data) => {
 
